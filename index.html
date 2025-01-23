@@ -11,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -20,7 +21,7 @@
           <h1 class="hero-title">
             It’s a hot place for your streaming fantasy.
           </h1>
-          <p class="hero-description">
+          <p class="description hero-description">
             It’s a free space for watching streams and chatting with alluring
             people.
           </p>
@@ -30,13 +31,62 @@
       </section>
       <section class="form">
         <div class="container">
-          <h2>It’s a dedicated space for your bold fantasies!</h2>
-          <p>
+          <h2 class="title">It’s a dedicated space for your bold fantasies!</h2>
+          <p class="description form-description">
             Hundreds of attractive admirers are already waiting for you here.
             Don’t delay – dive into the world of streaming, flirting and hot
             communication right now!
           </p>
-          <form></form>
+          <form class="section-form" name="section-form">
+            <div class="label-wrapper-sex">
+              <label class="label-sex">I am </label>
+              <div class="wrapper-sex">
+                <input
+                  type="text"
+                  name="user_sex"
+                  class="sex-input male"
+                  minlength="2"
+                  placeholder="Male"
+                />
+                <input
+                  type="text"
+                  name="user_sex"
+                  class="sex-input female"
+                  minlength="2"
+                  placeholder="Female"
+                />
+              </div>
+            </div>
+            <label class="label-name">
+              <span class="label-sex">My name is</span>
+              <input
+                type="text"
+                name="user_name"
+                class="sex-input name"
+                placeholder="e.g. Alex"
+              />
+            </label>
+            <label class="label-born">
+              <span class="label-sex">I was born on</span>
+              <input
+                type="text"
+                id="datepicker"
+                class="sex-input born"
+                placeholder="DD/MM/YYYY"
+              />
+            </label>
+            <label class="label-policy">
+              <input type="checkbox" name="policy" id="" class="checkbox" />
+              <span class="policy"
+                >I have read understand and agree to Terms of Use, Privacy
+                Policy, Disclosures&Disclaimers.</span
+              >
+            </label>
+            <button type="submit" class="button form-button">
+              Sign up now
+            </button>
+            <span class="form-element"></span>
+          </form>
         </div>
       </section>
       <section class="swipe"></section>
@@ -131,5 +181,11 @@
         </ul>
       </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.6/dist/inputmask.min.js"></script>
+    <script>
+      var input = document.getElementById("datepicker");
+      var im = new Inputmask("99/99/9999");
+      im.mask(input);
+    </script>
   </body>
 </html>
